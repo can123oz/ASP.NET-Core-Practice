@@ -1,0 +1,47 @@
+﻿@*@using zeroToHeroMVC.Models
+    @model List<Product>
+
+
+    <h3>MODEL BAZLI VERI GONDERME</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Id</li>
+            <li>@item.ProductName</li>
+            <li>@item.Quantity</li>
+        }
+    </ul>*@
+
+
+
+@* <h3>ViewBag Ornek uygulama</h3>
+    <ul>
+        @foreach (var item in ViewBag.products as List<zeroToHeroMVC.Models.Product>)
+        {
+            <li>@item.ProductName</li>
+        }
+    </ul>*@
+
+
+@*<h3>ViewData Ornek Uygulama</h3>
+
+<ul>
+    @foreach (var item in ViewData["products"] as List<zeroToHeroMVC.Models.Product>)
+    {
+        <li>@item.ProductName</li>
+    }
+</ul>*@
+
+
+@*<h3>TempData Ornek Uygulama</h3>
+
+<ul>
+    @foreach (var item in TempData["products"] as List<zeroToHeroMVC.Models.Product> )
+    {
+        <li>@item.Quantity</li>
+    }
+
+</ul>*@
+
+<h1>deneme</h1>
+

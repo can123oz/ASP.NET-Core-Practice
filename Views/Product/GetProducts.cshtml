@@ -1,0 +1,51 @@
+﻿@*@using zeroToHeroMVC.Models
+    @model Product
+
+    <h3>tum urunler</h3>
+
+
+    <h5>@Model.Id</h5>
+    <h5>@Model.ProductName</h5>
+    <h5>@Model.Quantity</h5>*@
+
+@*ViewModel ile veri tasima ornegi
+    @using zeroToHeroMVC.Models.ViewModels
+    @model UserProduct
+
+    <h2>@Model.Product.ProductName</h2>
+    <h2>@Model.User.Name</h2>*@
+
+
+
+Tuple nesnesi kullanimi ornegi
+@using zeroToHeroMVC.Models
+@model (Product productTuple, User userTuple,Customers customerTuple)
+
+
+<h2>@Model.productTuple.ProductName</h2>
+<br />
+
+<h2>@Model.userTuple.Name</h2>
+
+<h3>@Model.customerTuple.CustomerName</h3>
+
+
+@*Razor ile ornekler*@
+@{ 
+    int a = 5;
+}
+<h1>@a</h1>
+@{ 
+    a = 10;
+}
+<h2>@a</h2>
+@{ 
+    <div> @a </div>
+}
+@if (true)
+            {
+                <text> EVET</text>
+            }
+<h4>@(a*2)</h4>
+<h4>@(a*2 > 30 ? "evet buyuk 30 dan" : "hayir 30 dan kucuk" )</h4>
+

@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+}
+
+@using zeroToHeroMVC.Models
+@model User
+
+<h1>index view i </h1>
+
+<h3>@ViewBag.DenemeData</h3>
+<h3>@Model.LastName</h3>
+    @Html.Partial("~/Views/Home/DenemePartial.cshtml")
+
+
+<h5>custom url ile start up</h5>

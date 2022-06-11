@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h3>form tabanli veri alma</h3>
+
+<form asp-action="VeriAlmaBir" asp-controller="VeriAlma" method="post">
+
+    <input type="text" name="txtValue1" value="" /><br />
+    <input type="text" name="txtValue2" value="" /><br />
+    <input type="text" name="txtValue3" value="" /><br />
+
+    <button>Gonder</button>
+</form>
+
+
+
+Bind edilmis form ile veri almak.
+@using zeroToHeroMVC.Models
+@model FormVeriOgrenme
+
+<form asp-action="VeriAlmaBind" asp-controller="VeriAlma" method="post">
+
+     <input type="text" asp-for="txtValue1" /><br />
+     <input type="text" asp-for="txtValue2" /><br />
+     <input type="text" asp-for="txtValue3" /><br />
+
+     <button>Gonder</button>
+</form>
+
+
+
+Route parameter ile veri alma
+<a asp-controller="VeriAlma" asp-action="VeriAlRoute" asp-route-a="ahmet" asp-route-b="burak" asp-route-id="123" asp-route-x="denemeroute">content</a>
+
+<br /><br />
+      <hr />
+Header Uzerinden Veri alma 

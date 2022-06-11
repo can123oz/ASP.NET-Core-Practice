@@ -1,0 +1,36 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using zeroToHeroMVC.Models
+@model (Product product, User user)
+
+
+@* Jquery kutuphanesi eklendi. kullanılabilir *@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+
+
+<h3>ajax ile veri yollama pratiği</h3>
+<button id="btnSend">Gönder Ajax</button>
+<br /><hr /><br />
+
+@*Bu sayfanın controlerındaki GET actionuna tuple bir nesne tanımlanır böylece null gelmemiş olur değer.*@
+<h3>Tuple nesne bind ile post islemi</h3>
+<form asp-action="tuplePost" asp-controller="Product" method="post">
+    <input type="text" asp-for="product.ProductName" placeholder="productName"/> <br />
+    
+    <input type="text" asp-for="user.Name" placeholder="User name"/> <br />   
+    
+    <input type="text" asp-for="user.LastName" placeholder="User lastName"/> <br />
+
+    <button>Gonder Tuple</button>
+</form>
+
+
+
+
+<script type="text/javascript">
+
+    $("#btnSend").click(() => {
+        $.post("https://localhost:44356/Product/ajaxlearn", { Id: 10, ProductName: "a product", Quantity: 12 })
+
+    });
+
+</script>

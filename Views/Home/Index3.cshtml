@@ -1,0 +1,38 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *,zeroToHeroMVC
+@{
+    ViewData["Title"] = "Index3";
+}
+
+<h1>Index3</h1>
+
+@Html.TextBox("txtID", null, new { style = "background-color:green;" })
+
+@using zeroToHeroMVC.Extentions
+
+
+@Html.CustomTextBox("txtCustomAdi", "sikisdegeri", "adiniz")
+
+@*
+    @Html.BeginForm("FormHelper", "Product", FormMethod.Post) form olusturur server tabanli
+    @Html.TextBox("txtadi")
+*@
+<form asp-action="FormHelper" asp-controller="Product" method="post">
+    @*tag helper, okunurluk super bu yontemle*@
+
+    <input type="text" name="name" value=""/>
+
+</form>
+
+<cache> @*bir tag helperdir *@
+    Cache: @DateTime.Now
+</cache>
+<br />
+@DateTime.Now
+
+<a href="mailto:canozdemir92@gmail.com">Email</a>
+<br /><br />
+@*custom TagHelper kucuk harf gelir*@
+<email-deneme a="abcd" mail="canozdemir92@gmail.com" display="CanOzdemir maili">
+
+</email-deneme>
