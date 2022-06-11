@@ -41,7 +41,7 @@ namespace zeroToHeroMVC.Controllers
         }
 
 
-        //Bind edilmis sekilde yollama
+        //Bind edilmis sekilde yollama //sending data with binding.
         [HttpPost]
         public IActionResult VeriAlmaBind(FormVeriOgrenme gelenveriler)
         {
@@ -49,7 +49,7 @@ namespace zeroToHeroMVC.Controllers
         }
 
 
-        //QueryString icin ornek
+        //QueryString icin ornek  //QueryString example
         public IActionResult VeriAl(string a, string b)
         {
             var quaryString = Request.QueryString;

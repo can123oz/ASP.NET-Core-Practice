@@ -30,7 +30,7 @@ namespace zeroToHeroMVC.Controllers
         //Header ile request yakalama
         public  IActionResult headerData()
         {
-            var headers = Request.Headers.ToList(); // üzerinden yakalanır.
+            var headers = Request.Headers.ToList(); // üzerinden yakalanır. header data catching way.
             return View();
         }
 
