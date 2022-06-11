@@ -1,5 +1,5 @@
 # ASP.NET-Core-Practice
-Useful practices for sending tuple objects from controller, getting tuples from forms, Validation with Model MetadataTypes.
+Useful practices for sending data from controller, getting data from views, Validation types. Worked on MVC design Pattern.
 
 Topics in this practice ;
 
