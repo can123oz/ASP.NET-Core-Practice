@@ -25,3 +25,4 @@ Topics in this practice ;
 10- Worked on Model Bindings
 
 These are all for practice and see the difference in between types.
+Sorry for Turkish Comment lines
