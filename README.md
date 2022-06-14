@@ -24,5 +24,14 @@ Topics in this practice ;
 
 10- Worked on Model Bindings
 
-These are all for practice and see the difference in between types.
+11- Add FluentValidation library on backend for better reusable codes.
+
+12- We have to make validations both in fontend and backend with same credentials.
+    Because if we dont make it at the frontend, the feedback will arrive to the user
+    with the response. So its un efficient way of controlling data. Thats why we have
+    to make controls in the Views layer and controller layer.
+
+ 
+
+These are all for practices to see difference in between types and methods.
 Sorry for Turkish Comment lines

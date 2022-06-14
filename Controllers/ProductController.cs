@@ -180,11 +180,9 @@ namespace zeroToHeroMVC.Controllers
         {
             //ModelState : MVC`de bir type in data annotationlarinin durumunu kontrol eden ve geriye sonuc donen bir property.
             //model state ile check edilicek classtaki required kisimlari.
-
             if (!ModelState.IsValid)
             {
                 // Error dondurmek icin kullaniyorsun burayi, veya loglama islemleri icin.
-
                 ViewBag.HataMesaj = ModelState.Values.FirstOrDefault(x => x.ValidationState == ModelValidationState.Invalid).Errors[0].ErrorMessage;
                 return View(product);
             }

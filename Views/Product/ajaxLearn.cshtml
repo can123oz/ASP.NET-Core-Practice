@@ -1,27 +1,50 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using zeroToHeroMVC.Models
 @model (Product product, User user)
+@* Jquery library added. for this view. *@
 
 
-@* Jquery kutuphanesi eklendi. kullanılabilir *@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>  @*Microsoft developed this*@
+
 
 
 <h3>ajax ile veri yollama pratiği</h3>
 <button id="btnSend">Gönder Ajax</button>
-<br /><hr /><br />
+<br />
+<hr />
+<br />
+<div asp-validation-summary="All">
+    @*All Validation Messages will appear.*@
+</div>
 
 @*Bu sayfanın controlerındaki GET actionuna tuple bir nesne tanımlanır böylece null gelmemiş olur değer.*@
+@*This page´s view will create a tuple object and with this method the tuple we want to send to the form post controller tuple wont be null.*@
 <h3>Tuple nesne bind ile post islemi</h3>
 <form asp-action="tuplePost" asp-controller="Product" method="post">
-    <input type="text" asp-for="product.ProductName" placeholder="productName"/> <br />
-    
-    <input type="text" asp-for="user.Name" placeholder="User name"/> <br />   
-    
-    <input type="text" asp-for="user.LastName" placeholder="User lastName"/> <br />
+    <input type="text" asp-for="product.ProductName" placeholder="productName" /> <br />
+          <span asp-validation-for="product.ProductName"></span>
+    <input type="text" asp-for="user.Name" placeholder="User name" /> <br />
 
-    <button>Gonder Tuple</button>
+    <input type="text" asp-for="user.LastName" placeholder="User lastName" /> <br />
+
+    <button>Send Tuple</button>
 </form>
+@*
+
+
+    We have to make validations both in fontend and backend with same credentials.
+    Because if we dont make it at the frontend, the feedback will arrive to the user
+    with the response. So its un efficient way of controlling data. Thats why we have
+    to make controls in the Views layer and controller layer.
+
+
+*@
+
+
+
 
 
 

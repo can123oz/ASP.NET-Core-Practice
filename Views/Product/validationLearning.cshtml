@@ -3,14 +3,19 @@
 @model Product
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>  @*Microsoft developed this*@
+
+
 
 <h3>validation learning page</h3>
 <br />
 
 <form method="post" asp-action="validationLearning" asp-controller="Product">
 
-    <input type="text" asp-for="ProductName" placeholder="ProductName" /> 
-    <span asp-validation-for="ProductName"></span> <br /> 
+    <input type="text" asp-for="ProductName" placeholder="ProductName" />
+    <span asp-validation-for="ProductName"></span> <br />
 
     <input type="text" asp-for="Quantity" placeholder="Quantity" /><br />
 
